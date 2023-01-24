@@ -1,0 +1,12 @@
+/* Celulares */
+@media only screen and (max-width: 480px)  {
+    .image-product{
+        object-fit: contain;
+        height: 150px!important;
+    }
+
+    .category{
+        display: none;
+    }
+  }
+  
