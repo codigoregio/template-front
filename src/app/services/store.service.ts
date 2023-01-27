@@ -5,6 +5,7 @@ import { Product } from '../models/product.model';
 
 const STORE_BASE_URL = 'https://fakestoreapi.com';
 const LOCAL_API = 'http://localhost:4242/api';
+const CORE_API = 'https://backend-nodejs-production-b5b5.up.railway.app/api';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class StoreService {
 
   getAllProducts(limit= 4, sort= 'asc', category?: string): Observable<Array<Product>> {
     return this.http.get<Array<Product>>(
-      `${LOCAL_API}/products${
+      `${CORE_API}/products${
         category ? '?category=' + category + '&' : `?`
       }order=${sort}&quantity=${limit}`
       );
